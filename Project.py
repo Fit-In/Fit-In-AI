@@ -14,9 +14,9 @@ from IPython.display import display
 warnings.filterwarnings(action='ignore')
 
 def get_url():
-    keyword=input('검색어를 입력하시오 :')
+    keyword=input('검색어를 입력하시오 : ')
     url = 'https://www.youtube.com/results?search_query={}'.format(keyword)
-    driver = webdriver.Chrome(executable_path='C:/Users/user0910/PycharmProjects/pythonProject5/chromedriver.exe')
+    driver = webdriver.Chrome(executable_path='C:/Users/user0910/PycharmProjects/Fit-In-AI/chromedriver.exe')
     driver.get(url)
     soup = bs(driver.page_source, 'html.parser')
 
@@ -59,7 +59,7 @@ def get_url():
         question = input('원하는 영상을 재생하시겠습니까? (y/n)')
         if question == 'y':
             button = int(input('재생하고자 하는 영상의 번호(출력된 표 가장 왼쪽의 번호)를 입력해주세요.'))
-            driver = webdriver.Chrome(executable_path='C:/Users/user0910/PycharmProjects/pythonProject5')
+            driver = webdriver.Chrome(executable_path='C:/Users/user0910/PycharmProjects/Fit-In-AI/chromedriver.exe')
             driver.get(youtubeDf['주소'][button])
         else:
             return '프로그램을 종료합니다.'
