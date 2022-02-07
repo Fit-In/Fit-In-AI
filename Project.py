@@ -14,7 +14,7 @@ from IPython.display import display
 warnings.filterwarnings(action='ignore')
 
 def get_url():
-    keyword=input('검색어를 입력하시오 : ')
+    keyword=input('검색어를 입력하시오 :')
     url = 'https://www.youtube.com/results?search_query={}'.format(keyword)
     driver = webdriver.Chrome(executable_path='C:/Users/user0910/PycharmProjects/pythonProject5/chromedriver.exe')
     driver.get(url)
